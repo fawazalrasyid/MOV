@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/colorBlue"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/colorBlue">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,9 +31,11 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/shape_rectangle_white"
+            app:layout_constraintBottom_toTopOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3">
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/textView21"
@@ -55,6 +59,7 @@
                 android:drawableLeft="@drawable/ic_calendar"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/light"
+                android:gravity="center"
                 android:text="@string/datetime"
                 android:textColor="@color/colorBlueGrey"
                 android:textSize="12sp"
@@ -70,6 +75,7 @@
                 android:drawableLeft="@drawable/ic_local_movies"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/light"
+                android:gravity="center"
                 android:text="@string/cinema"
                 android:textColor="@color/colorBlueGrey"
                 android:textSize="12sp"
@@ -229,11 +235,9 @@
             android:id="@+id/imageView5"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_marginTop="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
             app:srcCompat="@color/colorWhiteGrey" />
 
         <TextView
@@ -254,7 +258,6 @@
             android:layout_marginStart="24dp"
             android:fontFamily="@font/light"
             android:text="Scan QR"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 

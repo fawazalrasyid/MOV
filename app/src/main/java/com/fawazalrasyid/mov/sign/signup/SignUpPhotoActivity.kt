@@ -2,6 +2,7 @@ package com.fawazalrasyid.mov.sign.signup
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Bitmap
@@ -9,6 +10,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -17,6 +19,7 @@ import com.fawazalrasyid.mov.utils.Preferences
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.fawazalrasyid.mov.home.HomeActivity
+import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.karumi.dexter.Dexter
@@ -40,11 +43,11 @@ class SignUpPhotoActivity : AppCompatActivity(), PermissionListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_photo)
-        setupPermissions()
+
 
         preferences = Preferences(this)
-        storage = FirebaseStorage.getInstance();
-        storageReference = storage.getReference();
+        storage = FirebaseStorage.getInstance()
+        storageReference = storage.getReference()
         tv_hello.text = "Selamat Datang\n"+intent.getStringExtra("nama")
 
         iv_add.setOnClickListener {
@@ -59,6 +62,10 @@ class SignUpPhotoActivity : AppCompatActivity(), PermissionListener {
                     .withPermission(Manifest.permission.CAMERA)
                     .withListener(this)
                     .check()
+
+                ImagePicker.with(this)
+                    .cameraOnly()
+                    .start()
             }
 
         }
@@ -135,28 +142,53 @@ class SignUpPhotoActivity : AppCompatActivity(), PermissionListener {
         Toast.makeText(this, "Tergesah? Klik tombol Upload Nanti aja", Toast.LENGTH_LONG ).show()
     }
 
-    @SuppressLint("MissingSuperCall")
+//    @SuppressLint("MissingSuperCall")
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+//            var bitmap = data?.extras?.get("data") as Bitmap
+//            statusAdd = true
+//
+//            filePath = data.getData()!!
+//
+//
+//            Glide.with(this)
+//                .load(bitmap)
+//                .apply(RequestOptions.circleCropTransform())
+//                .into(iv_profile)
+//
+//            btn_save.visibility = View.VISIBLE
+//            iv_add.setImageResource(R.drawable.ic_btn_delete)
+//        }
+//    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            var bitmap = data?.extras?.get("data") as Bitmap
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {
+            //Image Uri will not be null for RESULT_OK
             statusAdd = true
+            filePath = data?.data!!
 
-            filePath = data.getData()!!
-
-
+            //You can get File object from intent
             Glide.with(this)
-                .load(bitmap)
+                .load(filePath)
                 .apply(RequestOptions.circleCropTransform())
                 .into(iv_profile)
 
+            Log.v("tamvan", "file uri  upload"+filePath)
+
             btn_save.visibility = View.VISIBLE
             iv_add.setImageResource(R.drawable.ic_btn_delete)
+
+        } else if (resultCode == ImagePicker.RESULT_ERROR) {
+            Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun setupPermissions() {
-        ActivityCompat.requestPermissions(this,
-            arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),101)
-    }
+//    private fun setupPermissions() {
+//        ActivityCompat.requestPermissions(this,
+//            arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),101)
+//    }
 
 }
