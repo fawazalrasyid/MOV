@@ -1,13 +1,13 @@
 package com.fawazalrasyid.mov.checkout
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.fawazalrasyid.mov.R
 import com.fawazalrasyid.mov.home.HomeActivity
-import com.fawazalrasyid.mov.home.dashboard.DashboardFragment
 import com.fawazalrasyid.mov.home.tiket.TiketFragment
 import kotlinx.android.synthetic.main.activity_checkout_success.*
+
 
 class CheckoutSuccessActivity : AppCompatActivity() {
 

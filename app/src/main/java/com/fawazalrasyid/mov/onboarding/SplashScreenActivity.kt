@@ -6,9 +6,16 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Window
 import android.view.WindowManager
+import com.bumptech.glide.Glide
 import com.fawazalrasyid.mov.*
+import com.fawazalrasyid.mov.home.HomeActivity
+import com.fawazalrasyid.mov.sign.signin.SignInActivity
+import com.fawazalrasyid.mov.utils.Preferences
+import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity() {
+
+    lateinit var preferences : Preferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,10 +24,24 @@ class SplashScreenActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
         setContentView(R.layout.activity_splash_screen)
 
-        Handler().postDelayed({
-            startActivity(Intent(this, OnboardingOneActivity::class.java))
-            finish()
-        },3000)
+        preferences = Preferences(this)
+
+        if (preferences.getValues("status").equals("1")) {
+            Handler().postDelayed({
+                startActivity(Intent(this, HomeActivity::class.java))
+                finish()
+            }, 4000)
+        }
+        else{
+            Handler().postDelayed({
+                startActivity(Intent(this, OnboardingOneActivity::class.java))
+                finish()
+            }, 4000)
+        }
+
+        Glide.with(this)
+            .load(R.drawable.loader)
+            .into(iv_loader)
 
     }
 }
