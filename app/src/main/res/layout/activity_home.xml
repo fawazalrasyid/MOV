@@ -30,23 +30,35 @@
         <ImageView
             android:id="@+id/iv_menu1"
             android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_home_active" />
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:src="@drawable/ic_home_active"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"/>
 
         <ImageView
             android:id="@+id/iv_menu2"
             android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_tiket" />
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:src="@drawable/ic_tiket"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground" />
 
         <ImageView
             android:id="@+id/iv_menu3"
             android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_profile" />
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:src="@drawable/ic_profile"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"/>
 
     </LinearLayout>
 

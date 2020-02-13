@@ -6,6 +6,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.fawazalrasyid.mov.R
 import com.fawazalrasyid.mov.home.dashboard.DashboardFragment
+import com.fawazalrasyid.mov.home.setting.SettingFragment
 import com.fawazalrasyid.mov.home.tiket.TiketFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -58,4 +59,5 @@ class HomeActivity : AppCompatActivity() {
         imageView.setImageResource(int)
 
     }
+
 }

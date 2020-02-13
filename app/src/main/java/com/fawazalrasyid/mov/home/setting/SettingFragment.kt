@@ -1,4 +1,4 @@
-package com.fawazalrasyid.mov.home
+package com.fawazalrasyid.mov.home.setting
 
 
 import android.os.Bundle
