@@ -36,7 +36,7 @@
             android:paddingBottom="12dp"
             android:src="@drawable/ic_home_active"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground"/>
+            android:foreground="?attr/selectableItemBackground" />
 
         <ImageView
             android:id="@+id/iv_menu2"

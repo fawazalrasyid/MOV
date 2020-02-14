@@ -46,6 +46,10 @@ class TiketActivity : AppCompatActivity() {
             showDialog()
         }
 
+        imageView3.setOnClickListener {
+            finish()
+        }
+
     }
 
     fun showDialog(){
