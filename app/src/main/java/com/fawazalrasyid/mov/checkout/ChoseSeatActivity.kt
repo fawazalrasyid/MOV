@@ -280,12 +280,14 @@ class ChoseSeatActivity : AppCompatActivity() {
             }
         }
 
+
+
         btn_belitiket.setOnClickListener {
 
             val intent = Intent(
                 this,
                 CheckoutActivity::class.java
-            ).putExtra("data", dataList)
+            ).putExtra("data", dataList).putExtra("datas", data)
             startActivity(intent)
         }
 
