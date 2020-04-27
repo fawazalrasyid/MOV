@@ -48,7 +48,7 @@ class CheckoutActivity : AppCompatActivity() {
 
         btn_beli.setOnClickListener {
             val intent = Intent(this@CheckoutActivity,
-                CheckoutSuccessActivity::class.java)
+                CheckoutSuccessActivity::class.java).putExtra("data", data)
             startActivity(intent)
 
             showNotif(data)
@@ -101,11 +101,6 @@ class CheckoutActivity : AppCompatActivity() {
         val builder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
         builder.setContentIntent(pendingIntent)
             .setSmallIcon(R.drawable.logo_mov)
-            .setLargeIcon(
-                BitmapFactory.decodeResource(
-                    this.resources,R.drawable.logo_notification
-                )
-            )
 
             .setTicker("notif bwa starting")
             .setAutoCancel(true)

@@ -48,6 +48,9 @@ class ChoseSeatActivity : AppCompatActivity() {
                 total -=1
                 belitiket(total)
 
+                // delete data
+                dataList.remove(Checkout("B3", "70000"))
+
             } else {
                 b3.setImageResource(R.drawable.ic_rectangle_selected)
                 statusB3 = true
@@ -65,6 +68,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusB4 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("B4", "70000"))
+
             } else {
                 b4.setImageResource(R.drawable.ic_rectangle_selected)
                 statusB4 = true
@@ -82,6 +89,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusB5 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("B5", "70000"))
+
             } else {
                 b5.setImageResource(R.drawable.ic_rectangle_selected)
                 statusB5 = true
@@ -99,6 +110,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusB6 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("B6", "70000"))
+
             } else {
                 b6.setImageResource(R.drawable.ic_rectangle_selected)
                 statusB6 = true
@@ -116,6 +131,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusC2 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("C2", "70000"))
+
             } else {
                 c2.setImageResource(R.drawable.ic_rectangle_selected)
                 statusC2 = true
@@ -133,6 +152,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusC3 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("C3", "70000"))
+
             } else {
                 c3.setImageResource(R.drawable.ic_rectangle_selected)
                 statusC3 = true
@@ -150,6 +173,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusC4 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("C4", "70000"))
+
             } else {
                 c4.setImageResource(R.drawable.ic_rectangle_selected)
                 statusC4= true
@@ -167,6 +194,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusC5 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("C5", "70000"))
+
             } else {
                 c5.setImageResource(R.drawable.ic_rectangle_selected)
                 statusC5 = true
@@ -184,6 +215,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusC6 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("C6", "70000"))
+
             } else {
                 c6.setImageResource(R.drawable.ic_rectangle_selected)
                 statusC6 = true
@@ -201,6 +236,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusC7 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("C7", "70000"))
+
             } else {
                 c7.setImageResource(R.drawable.ic_rectangle_selected)
                 statusC7 = true
@@ -218,6 +257,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusD3 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("D3", "70000"))
+
             } else {
                 d3.setImageResource(R.drawable.ic_rectangle_selected)
                 statusD3 = true
@@ -235,6 +278,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusD4 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("D4", "70000"))
+
             } else {
                 d4.setImageResource(R.drawable.ic_rectangle_selected)
                 statusD4 = true
@@ -252,6 +299,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusD5 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("D5", "70000"))
+
             } else {
                 d5.setImageResource(R.drawable.ic_rectangle_selected)
                 statusD5 = true
@@ -269,6 +320,10 @@ class ChoseSeatActivity : AppCompatActivity() {
                 statusD6 = false
                 total -=1
                 belitiket(total)
+
+                // delete data
+                dataList.remove(Checkout("D6", "70000"))
+
             } else {
                 d6.setImageResource(R.drawable.ic_rectangle_selected)
                 statusD6 = true

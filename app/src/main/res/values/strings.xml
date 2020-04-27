@@ -48,4 +48,14 @@
     <string name="happy_watch">Happy Watching!</string>
     <string name="home">Home</string>
     <string name="lihat_tiket">Lihat Tiket</string>
+    <string name="top_up_saldo">TOP UP SALDO</string>
+    <string name="e_wallet_telah_berhasil_nuntuk_diperbarui">E-Wallet telah berhasil\nuntuk diperbarui</string>
+    <string name="you_got_it">You got it!</string>
+    <string name="idr_10_000">IDR\n10.000</string>
+    <string name="idr_20_000">IDR\n20.000</string>
+    <string name="idr_30_000">IDR\n30.000</string>
+    <string name="idr_40_000">IDR\n40.000</string>
+    <string name="idr_50_000">IDR\n50.000</string>
+    <string name="idr_60_000">IDR\n60.000</string>
+    <string name="lihat_wallet">Lihat Wallet</string>
 </resources>

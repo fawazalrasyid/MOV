@@ -1,6 +1,7 @@
 package com.fawazalrasyid.mov.home.setting
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 
 import com.fawazalrasyid.mov.R
 import com.fawazalrasyid.mov.utils.Preferences
+import com.fawazalrasyid.mov.wallet.MyWalletActivity
 import kotlinx.android.synthetic.main.fragment_setting.*
 
 /**
@@ -42,6 +44,10 @@ class SettingFragment : Fragment() {
             .placeholder(R.drawable.user_pic)
             .apply(RequestOptions.circleCropTransform())
             .into(iv_profile)
+
+        tv_my_wallet.setOnClickListener {
+            startActivity(Intent(activity, MyWalletActivity::class.java))
+        }
 
     }
 

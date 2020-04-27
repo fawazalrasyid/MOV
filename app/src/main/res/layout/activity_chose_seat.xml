@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:background="@color/colorBlue">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -505,6 +507,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="115dp"
             android:drawableLeft="@drawable/ic_rectangle_booked"
             android:drawablePadding="10dp"
             android:fontFamily="@font/light"
@@ -512,8 +515,10 @@
             android:text="@string/booked"
             android:textColor="@color/colorWhite"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_belitiket"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ll_line5" />
+            app:layout_constraintTop_toBottomOf="@+id/ll_line5"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView188"
@@ -521,6 +526,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="115dp"
             android:drawableLeft="@drawable/ic_rectangle_empty"
             android:drawablePadding="10dp"
             android:fontFamily="@font/light"
@@ -528,8 +534,10 @@
             android:text="@string/empety"
             android:textColor="@color/colorWhite"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_belitiket"
             app:layout_constraintStart_toEndOf="@+id/textView16"
-            app:layout_constraintTop_toBottomOf="@+id/ll_line5" />
+            app:layout_constraintTop_toBottomOf="@+id/ll_line5"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView19"
@@ -537,6 +545,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="131dp"
             android:drawableLeft="@drawable/ic_rectangle_selected"
             android:drawablePadding="10dp"
             android:fontFamily="@font/light"
@@ -544,15 +553,16 @@
             android:text="@string/selected"
             android:textColor="@color/colorWhite"
             android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_belitiket"
             app:layout_constraintStart_toEndOf="@+id/textView188"
-            app:layout_constraintTop_toBottomOf="@+id/ll_line5" />
+            app:layout_constraintTop_toBottomOf="@+id/ll_line5"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btn_belitiket"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="32dp"
             android:background="@drawable/shape_rectangel_pink"
@@ -562,9 +572,7 @@
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView16"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

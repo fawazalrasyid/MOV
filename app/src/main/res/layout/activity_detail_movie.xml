@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/colorBlue"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/colorBlue">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -35,7 +37,7 @@
         <ImageView
             android:id="@+id/iv_back"
             android:layout_width="32dp"
-            android:layout_height="24dp"
+            android:layout_height="32dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -124,27 +126,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_pilih_bangku"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btn_pilih_bangku"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="32dp"
             android:background="@drawable/shape_rectangel_pink"
             android:fontFamily="@font/semibold"
+            android:overScrollMode="never"
             android:text="@string/pilih_bangku"
             android:textColor="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_whoplay" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/btn_play"
